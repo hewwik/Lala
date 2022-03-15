@@ -73,3 +73,69 @@ p span {
   font-family: 'Raleway', sans-serif;
 color: #000;		
 }
+body{
+  font-family:var(--font);
+  font-size:16px;
+  overflow-x:hidden;
+  min-height:100vh;
+  color:#fff
+}
+a,span{
+  display:inline-block
+}
+a{
+  text-decoration:None
+}
+ul{
+  list-style:none
+}
+i{
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+
+.container-fluid{
+  background:#111;
+  height:820px;
+  min-height:100vh;
+  position:relative;
+  overflow:hidden
+}
+
+.controll{
+	position:fixed;
+	width:100px;
+	height:100px;
+	bottom:50px;
+	right:50px;
+	cursor:pointer;
+	z-index:1000
+		
+}
+.controll:before{
+	width:100px;
+	height:100px;
+	box-shadow:0 0 0 5px #fff;
+	border-radius:50%;
+	top:calc(50% - 50px);
+	left:calc(50% - 50px);
+	animation:pulse .5s ease-out infinite
+		
+}
+@keyframes pulse{
+	0%{
+		transform:scale(0);
+		box-shadow:0 0 0 0 #fff
+}
+	100%{
+		transform:scale(1);
+		box-shadow:0 0 0 5px #99579e
+}
+}
+.controll i,i.fa-play,i.fa-stop{
+	width:100px;
+	height:100px;
+	display:flex;
+	font-size:1.3rem
+}
